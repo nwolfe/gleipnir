@@ -11,33 +11,42 @@ class Gleipnir < Chingu::Window
 end
 
 class Player < Chingu::GameObject
-  def initialize(options)
-    super(options.merge(:image => Image["player_front.png"]))
+  def setup
     self.input = {
-      :holding_left => :move_left,
-      :holding_right => :move_right,
-      :holding_up => :move_up,
-      :holding_down => :move_down}
+      [:holding_left, :holding_h] => :move_left,
+      [:holding_right, :holding_l] => :move_right,
+      [:holding_up, :holding_k] => :move_up,
+      [:holding_down, :holding_j] => :move_down
+    }
+
+    @animations = Chingu::Animation.new(:file => "sprite_sheet_32x32.png")
+    @animations.frame_names = {
+      :down => 0..2, 
+      :up => 3..5, 
+      :left => 6..8, 
+      :right => 9..11
+    }
+    @image = @animations[:down].next
   end
 
   def move_left
-    self.image = Image["player_right.png"]
     @x -= 3
+    @image = @animations[:left].next
   end
 
   def move_right
-    self.image = Image["player_left.png"]
     @x += 3
+    @image = @animations[:right].next
   end
 
   def move_up
-    self.image = Image["player_back.png"]
     @y -= 3
+    @image = @animations[:up].next
   end
 
   def move_down
-    self.image = Image["player_front.png"]
     @y += 3
+    @image = @animations[:down].next
   end
 end
 
