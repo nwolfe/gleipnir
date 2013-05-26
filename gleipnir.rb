@@ -13,10 +13,17 @@ end
 class Player < Chingu::GameObject
   def setup
     self.input = {
-      [:holding_left, :holding_h] => :move_left,
-      [:holding_right, :holding_l] => :move_right,
       [:holding_up, :holding_k] => :move_up,
-      [:holding_down, :holding_j] => :move_down
+      [:released_up, :released_k] => :halt_up,
+
+      [:holding_down, :holding_j] => :move_down,
+      [:released_down, :released_j] => :halt_down,
+
+      [:holding_left, :holding_h] => :move_left,
+      [:released_left, :released_h] => :halt_left,
+        
+      [:holding_right, :holding_l] => :move_right,
+      [:released_right, :released_l] => :halt_right
     }
 
     @animations = Chingu::Animation.new(:file => "sprite_sheet_32x32.png")
@@ -34,9 +41,17 @@ class Player < Chingu::GameObject
     @image = @animations[:left].next
   end
 
+  def halt_left
+    @image = @animations[:left][0]
+  end
+
   def move_right
     @x += 3
     @image = @animations[:right].next
+  end
+
+  def halt_right
+    @image = @animations[:right][0]
   end
 
   def move_up
@@ -44,9 +59,17 @@ class Player < Chingu::GameObject
     @image = @animations[:up].next
   end
 
+  def halt_up
+    @image = @animations[:up].first
+  end
+
   def move_down
     @y += 3
     @image = @animations[:down].next
+  end
+
+  def halt_down
+    @image = @animations[:down].first
   end
 end
 
