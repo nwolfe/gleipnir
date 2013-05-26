@@ -4,11 +4,30 @@ include Gosu
 class Gleipnir < Chingu::Window
   def initialize
     super
-    self.input = {:escape => :exit}
     self.caption = "Gleipnir!"
+    push_game_state Intro
+  end
+end
+
+class Intro < Chingu::GameState
+  def initialize(options = {})
+    super
+    Chingu::Text.create(:text => "G L E I P N I R", :x => 375, :y => 50)
+    Chingu::Text.create(:text => "Programming by Nate Wolfe", :x => 350, :y => 150)
+    Chingu::Text.create(:text => "Artwork by Lew Lewis", :x => 365, :y => 170)
+    Chingu::Text.create(:text => "PRESS S TO START", :x => 370, :y => 400)
+    self.input = {:s => Play}
+  end
+end
+
+class Play < Chingu::GameState
+  def initialize(options = {})
+    super
+    self.input = {:escape => :exit}
     @player = Player.create(:x => 200, :y => 200)
   end
 end
+
 
 class Player < Chingu::GameObject
   def setup
@@ -42,7 +61,7 @@ class Player < Chingu::GameObject
   end
 
   def halt_left
-    @image = @animations[:left][0]
+    @image = @animations[:left].first
   end
 
   def move_right
@@ -51,7 +70,7 @@ class Player < Chingu::GameObject
   end
 
   def halt_right
-    @image = @animations[:right][0]
+    @image = @animations[:right].first
   end
 
   def move_up
