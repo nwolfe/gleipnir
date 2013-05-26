@@ -2,16 +2,14 @@ require 'chingu'
 include Gosu
 
 class Gleipnir < Chingu::Window
-  def initialize
-    super
+  def setup
     self.caption = "Gleipnir!"
     push_game_state Intro
   end
 end
 
 class Intro < Chingu::GameState
-  def initialize(options = {})
-    super
+  def setup
     Chingu::Text.create(:text => "G L E I P N I R", :x => 375, :y => 50)
     Chingu::Text.create(:text => "Programming by Nate Wolfe", :x => 350, :y => 150)
     Chingu::Text.create(:text => "Artwork by Lew Lewis", :x => 365, :y => 170)
@@ -21,8 +19,7 @@ class Intro < Chingu::GameState
 end
 
 class Play < Chingu::GameState
-  def initialize(options = {})
-    super
+  def setup
     self.input = {:escape => :exit}
     #load_game_objects # Load objects from "play.yml"
     create_level
