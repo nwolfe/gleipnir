@@ -17,5 +17,8 @@ tmp
 _yardoc
 doc/
 
-# IntelliJ RubyMine
+# IntelliJ
 .idea
+
+# Mac OS files
+.DS_Store
