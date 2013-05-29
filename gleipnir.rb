@@ -19,47 +19,20 @@ class Intro < Chingu::GameState
 end
 
 class Play < Chingu::GameState
+  trait :viewport
+
   def setup
     self.input = {:escape => :exit, :e => Chingu::GameStates::Edit}
+    self.viewport.lag = 0
+    self.viewport.game_area = [0, 0, 10000, 10000]
+
     load_game_objects # Load objects from "play.yml"
-    #create_level
-    @player = Player.create(:x => 200, :y => 200)
+    @player = Player.create(:x => 200, :y => 10000-200)
   end
 
-  def create_level
-    # left wall
-    for i in 0..15
-      x = 64
-      y = 64 + (32*i)
-      Wall.create(:x => x, :y => y) 
-    end
-    # right wall
-    for i in 0..15
-      x = 64 + (32*21)
-      y = 64 + (32*i)
-      Wall.create(:x => x, :y => y) 
-    end
-    # top wall
-    for i in 1..21
-      x = 64 + (32*i)
-      y = 64
-      Wall.create(:x => x, :y => y) 
-    end
-    # bottom wall
-    for i in 1..21
-      x = 64 + (32*i)
-      y = 64 + (32*15)
-      Wall.create(:x => x, :y => y) 
-    end
-
-    # Fill with Grass
-    for i in 0..19
-      for j in 0..13
-        x = 96 + (32*i)
-        y = 96 + (32*j)
-        Grass.create(:x => x, :y => y)
-      end
-    end
+  def update
+    super
+    self.viewport.center_around(@player)
   end
 end
 
