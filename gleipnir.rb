@@ -77,6 +77,43 @@ class Wall < Chingu::GameObject
   end
 end
 
+class BushyTree < Chingu::GameObject
+  traits :bounding_box, :collision_detection
+
+  def setup
+    @image = Image["bushy_tree.png"]
+  end
+end
+
+class RockPath < Chingu::GameObject
+  def setup
+    @image = Image["rock_path.png"]
+  end
+end
+
+class MudFloor < Chingu::GameObject
+  def setup
+    @image = Image["mud_floor.png"]
+  end
+end
+
+class RockWall < Chingu::GameObject
+  traits :bounding_box, :collision_detection
+
+  def setup
+    @image = Image["rock_wall.png"]
+  end
+end
+
+class CaveWall < Chingu::GameObject
+  traits :bounding_box, :collision_detection
+
+  def setup
+    @image = Image["cave_wall.png"]
+  end
+end
+
+
 class Player < Chingu::GameObject
   traits :bounding_box, :collision_detection
 
@@ -114,7 +151,9 @@ class Player < Chingu::GameObject
   def move_left
     @x -= 3
     @image = @animations[:left].next
-    @x = @last_x if self.first_collision(Wall)
+    if self.first_collision(Wall) || self.first_collision(BushyTree) || self.first_collision(RockWall) || self.first_collision(CaveWall)
+      @x = @last_x 
+    end
   end
 
   def halt_left
@@ -124,7 +163,9 @@ class Player < Chingu::GameObject
   def move_right
     @x += 3
     @image = @animations[:right].next
-    @x = @last_x if self.first_collision(Wall)
+    if self.first_collision(Wall) || self.first_collision(BushyTree) || self.first_collision(RockWall) || self.first_collision(CaveWall)
+      @x = @last_x 
+    end
   end
 
   def halt_right
@@ -134,7 +175,9 @@ class Player < Chingu::GameObject
   def move_up
     @y -= 3
     @image = @animations[:up].next
-    @y = @last_y if self.first_collision(Wall)
+    if self.first_collision(Wall) || self.first_collision(BushyTree) || self.first_collision(RockWall) || self.first_collision(CaveWall)
+      @y = @last_y
+    end
   end
 
   def halt_up
@@ -144,7 +187,9 @@ class Player < Chingu::GameObject
   def move_down
     @y += 3
     @image = @animations[:down].next
-    @y = @last_y if self.first_collision(Wall)
+    if self.first_collision(Wall) || self.first_collision(BushyTree) || self.first_collision(RockWall) || self.first_collision(CaveWall)
+      @y = @last_y
+    end
   end
 
   def halt_down
