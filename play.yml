@@ -1,0 +1,321 @@
+---
+- Wall:
+    :x: 16.0
+    :y: 216.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 152.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 184.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 248.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 280.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 312.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 344.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 376.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 408.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1
+    :factor_y: 1
+    :alpha: 255
+- Wall:
+    :x: 168.0
+    :y: 496.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 3.5
+    :factor_y: 3.5
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 216.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 152.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 184.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 248.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 280.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 312.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 344.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 376.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 408.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 136.0
+    :y: 328.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 6.0
+    :factor_y: 6.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 216.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 152.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 184.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 248.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 280.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 312.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 344.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 376.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 408.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 168.0
+    :y: 496.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 3.5
+    :factor_y: 3.5
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 216.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 152.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 184.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 248.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 280.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 312.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 344.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 376.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 16.0
+    :y: 408.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Wall:
+    :x: 136.0
+    :y: 328.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 6.0
+    :factor_y: 6.0
+    :alpha: 255
