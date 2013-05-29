@@ -4,7 +4,7 @@ include Gosu
 class Gleipnir < Chingu::Window
   def setup
     self.caption = "Gleipnir!"
-    push_game_state Intro
+    push_game_state Play
   end
 end
 
@@ -55,6 +55,14 @@ class BushyTree < Chingu::GameObject
 
   def setup
     @image = Image["bushy_tree.png"]
+  end
+end
+
+class WillowTree < Chingu::GameObject
+  traits :bounding_box, :collision_detection
+
+  def setup
+    @image = Image["willow.png"]
   end
 end
 
@@ -121,12 +129,33 @@ class Player < Chingu::GameObject
     @last_y = @y
   end
 
-  def move_left
-    @x -= 3
-    @image = @animations[:left].next
-    if self.first_collision(Wall) || self.first_collision(BushyTree) || self.first_collision(RockWall) || self.first_collision(CaveWall)
-      @x = @last_x 
+  def move(x, y)
+    if x > 0 || x < 0
+      @x += x
+      if self.first_collision(Wall) || 
+          self.first_collision(BushyTree) || 
+          self.first_collision(RockWall) || 
+          self.first_collision(CaveWall) || 
+          self.first_collision(WillowTree)
+        @x = @last_x
+      end
     end
+
+    if y > 0 || y < 0
+      @y += y
+      if self.first_collision(Wall) || 
+          self.first_collision(BushyTree) || 
+          self.first_collision(RockWall) || 
+          self.first_collision(CaveWall) || 
+          self.first_collision(WillowTree)
+        @y = @last_y
+      end
+    end
+  end
+
+  def move_left
+    @image = @animations[:left].next
+    move(-3, 0)
   end
 
   def halt_left
@@ -134,11 +163,8 @@ class Player < Chingu::GameObject
   end
 
   def move_right
-    @x += 3
     @image = @animations[:right].next
-    if self.first_collision(Wall) || self.first_collision(BushyTree) || self.first_collision(RockWall) || self.first_collision(CaveWall)
-      @x = @last_x 
-    end
+    move(3, 0)
   end
 
   def halt_right
@@ -146,11 +172,8 @@ class Player < Chingu::GameObject
   end
 
   def move_up
-    @y -= 3
     @image = @animations[:up].next
-    if self.first_collision(Wall) || self.first_collision(BushyTree) || self.first_collision(RockWall) || self.first_collision(CaveWall)
-      @y = @last_y
-    end
+    move(0, -3)
   end
 
   def halt_up
@@ -158,11 +181,8 @@ class Player < Chingu::GameObject
   end
 
   def move_down
-    @y += 3
     @image = @animations[:down].next
-    if self.first_collision(Wall) || self.first_collision(BushyTree) || self.first_collision(RockWall) || self.first_collision(CaveWall)
-      @y = @last_y
-    end
+    move(0, 3)
   end
 
   def halt_down
