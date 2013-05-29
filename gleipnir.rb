@@ -20,9 +20,9 @@ end
 
 class Play < Chingu::GameState
   def setup
-    self.input = {:escape => :exit}
-    #load_game_objects # Load objects from "play.yml"
-    create_level
+    self.input = {:escape => :exit, :e => Chingu::GameStates::Edit}
+    load_game_objects # Load objects from "play.yml"
+    #create_level
     @player = Player.create(:x => 200, :y => 200)
   end
 
