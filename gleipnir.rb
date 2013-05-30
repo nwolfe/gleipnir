@@ -10,6 +10,7 @@ end
 
 ## STATES
 
+=begin
 class Intro < Chingu::GameState
   def setup
     Chingu::Text.create(:text => "G L E I P N I R", :x => 375, :y => 50)
@@ -19,6 +20,7 @@ class Intro < Chingu::GameState
     self.input = {:s => StartingZone, :escape => :exit}
   end
 end
+=end
 
 class StartingZone < Chingu::GameState
   trait :viewport
@@ -88,7 +90,7 @@ class Player < Chingu::GameObject
   end
 
   def kollides?
-    self.first_collision(DarkBrick) || 
+    return self.first_collision(DarkBrick) || 
     self.first_collision(BushyTree) || 
     self.first_collision(BushyTreeApples) || 
     self.first_collision(WillowTree)
