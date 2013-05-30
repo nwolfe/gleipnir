@@ -33,7 +33,7 @@ class StartingZone < Chingu::GameState
   end
 
   def fill_with_grass
-    tiles_per_row = self.viewport.game_area.width / 32
+    tiles_per_row = (self.viewport.game_area.width / 32) + 1
     tiles_per_col = (self.viewport.game_area.height / 32) + 1
 
     tiles_per_col.times do |col|
