@@ -172271,9 +172271,3 @@
     :factor_x: 1.0
     :factor_y: 1.0
     :alpha: 255
-- Wall:
-    :x: 16.0
-    :y: 344.0
-    :angle: 360
-    :zorder: 98
-    :
