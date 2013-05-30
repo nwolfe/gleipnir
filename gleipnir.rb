@@ -87,27 +87,27 @@ class Player < Chingu::GameObject
     @last_y = @y
   end
 
+  def kollides?
+    self.first_collision(DarkBrick) || 
+    self.first_collision(BushyTree) || 
+    self.first_collision(BushyTreeApples) || 
+    self.first_collision(WillowTree)
+    self.first_collision(RockWall) || 
+    self.first_collision(CaveWall) || 
+    self.first_collision(CaveWall2) || 
+    self.first_collision(CaveWallGold) || 
+    self.first_collision(CaveWallShade)
+  end
+
   def move(x, y)
     if x > 0 || x < 0
       @x += x
-      if self.first_collision(Wall) || 
-          self.first_collision(BushyTree) || 
-          self.first_collision(RockWall) || 
-          self.first_collision(CaveWall) || 
-          self.first_collision(WillowTree)
-        @x = @last_x
-      end
+      @x = @last_x if kollides?
     end
 
     if y > 0 || y < 0
       @y += y
-      if self.first_collision(Wall) || 
-          self.first_collision(BushyTree) || 
-          self.first_collision(RockWall) || 
-          self.first_collision(CaveWall) || 
-          self.first_collision(WillowTree)
-        @y = @last_y
-      end
+      @y = @last_y if kollides?
     end
   end
 
@@ -192,39 +192,27 @@ class Mud < Chingu::GameObject
   end
 end
 
+class MudFloor < Chingu::GameObject
+  def setup
+    @image = Image["floor/mud_floor.png"]
+  end
+end
+
 class MudFloorGold < Chingu::GameObject
   def setup
     @image = Image["floor/mud_floor_gold.png"]
   end
 end
 
-class RedCobblestone < Chingu::GameObject
+class RockPath < Chingu::GameObject
   def setup
-    @image = Image["floor/red_cobblestone.png"]
-  end
-end
-
-class RockTile < Chingu::GameObject
-  def setup
-    @image = Image["floor/rock_tile.png"]
-  end
-end
-
-class Stone < Chingu::GameObject
-  def setup
-    @image = Image["floor/stone.png"]
-  end
-end
-
-class StoneTile < Chingu::GameObject
-  def setup
-    @image = Image["floor/stone_tile.png"]
+    @image = Image["floor/rock_path.png"]
   end
 end
 
 ## WALL TILES
   
-class Wall < Chingu::GameObject
+class DarkBrick < Chingu::GameObject
   traits :bounding_box, :collision_detection
 
   def setup
@@ -240,23 +228,19 @@ class BushyTree < Chingu::GameObject
   end
 end
 
+class BushyTreeApples < Chingu::GameObject
+  traits :bounding_box, :collision_detection
+
+  def setup
+    @image = Image["terrain/bushy_tree_apples.png"]
+  end
+end
+
 class WillowTree < Chingu::GameObject
   traits :bounding_box, :collision_detection
 
   def setup
     @image = Image["terrain/willow.png"]
-  end
-end
-
-class RockPath < Chingu::GameObject
-  def setup
-    @image = Image["floor/rock_path.png"]
-  end
-end
-
-class MudFloor < Chingu::GameObject
-  def setup
-    @image = Image["floor/mud_floor.png"]
   end
 end
 
@@ -273,6 +257,30 @@ class CaveWall < Chingu::GameObject
 
   def setup
     @image = Image["wall/cave_wall.png"]
+  end
+end
+
+class CaveWall2 < Chingu::GameObject
+  traits :bounding_box, :collision_detection
+
+  def setup
+    @image = Image["wall/cave_wall_2.png"]
+  end
+end
+
+class CaveWallGold < Chingu::GameObject
+  traits :bounding_box, :collision_detection
+
+  def setup
+    @image = Image["wall/cave_wall_gold.png"]
+  end
+end
+
+class CaveWallShade < Chingu::GameObject
+  traits :bounding_box, :collision_detection
+
+  def setup
+    @image = Image["wall/cave_wall_shade.png"]
   end
 end
 
