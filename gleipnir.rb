@@ -115,7 +115,7 @@ class Player < Chingu::GameObject
 
   def move_left
     @image = @animations[:left].next
-    move(-3, 0)
+    move(-2, 0)
   end
 
   def halt_left
@@ -124,7 +124,7 @@ class Player < Chingu::GameObject
 
   def move_right
     @image = @animations[:right].next
-    move(3, 0)
+    move(2, 0)
   end
 
   def halt_right
@@ -133,7 +133,7 @@ class Player < Chingu::GameObject
 
   def move_up
     @image = @animations[:up].next
-    move(0, -3)
+    move(0, -2)
   end
 
   def halt_up
@@ -142,7 +142,7 @@ class Player < Chingu::GameObject
 
   def move_down
     @image = @animations[:down].next
-    move(0, 3)
+    move(0, 2)
   end
 
   def halt_down
