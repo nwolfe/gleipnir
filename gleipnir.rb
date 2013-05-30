@@ -4,9 +4,11 @@ include Gosu
 class Gleipnir < Chingu::Window
   def setup
     self.caption = "Gleipnir!"
-    push_game_state Play
+    push_game_state StartingZone
   end
 end
+
+## STATES
 
 class Intro < Chingu::GameState
   def setup
@@ -14,20 +16,33 @@ class Intro < Chingu::GameState
     Chingu::Text.create(:text => "Programming by Nate Wolfe", :x => 350, :y => 150)
     Chingu::Text.create(:text => "Artwork by Lew Lewis", :x => 365, :y => 170)
     Chingu::Text.create(:text => "PRESS S TO START", :x => 370, :y => 400)
-    self.input = {:s => Play, :escape => :exit}
+    self.input = {:s => StartingZone, :escape => :exit}
   end
 end
 
-class Play < Chingu::GameState
+class StartingZone < Chingu::GameState
   trait :viewport
 
   def setup
     self.input = {:escape => :exit, :e => Chingu::GameStates::Edit}
     self.viewport.lag = 0
-    self.viewport.game_area = [0, 0, 10000, 10000]
+    self.viewport.game_area = [0, 0, 864, 672]
+    fill_with_grass
+    load_game_objects
+    @player = Player.create(:x => 200, :y => 200)
+  end
 
-    load_game_objects # Load objects from "play.yml"
-    @player = Player.create(:x => 200, :y => 10000-200)
+  def fill_with_grass
+    tiles_per_row = self.viewport.game_area.width / 32
+    tiles_per_col = (self.viewport.game_area.height / 32) + 1
+
+    tiles_per_col.times do |col|
+      y = col * 32
+      tiles_per_row.times do |row|
+        x = row * 32
+        Grass.create(:x => x, :y => y)
+      end
+    end
   end
 
   def update
@@ -36,64 +51,7 @@ class Play < Chingu::GameState
   end
 end
 
-class Grass < Chingu::GameObject
-  def setup
-    @image = Image["floor/grass.png"]
-  end
-end
-
-class Wall < Chingu::GameObject
-  traits :bounding_box, :collision_detection
-
-  def setup
-    @image = Image["wall/dark_brick.png"]
-  end
-end
-
-class BushyTree < Chingu::GameObject
-  traits :bounding_box, :collision_detection
-
-  def setup
-    @image = Image["terrain/bushy_tree.png"]
-  end
-end
-
-class WillowTree < Chingu::GameObject
-  traits :bounding_box, :collision_detection
-
-  def setup
-    @image = Image["terrain/willow.png"]
-  end
-end
-
-class RockPath < Chingu::GameObject
-  def setup
-    @image = Image["floor/rock_path.png"]
-  end
-end
-
-class MudFloor < Chingu::GameObject
-  def setup
-    @image = Image["floor/mud_floor.png"]
-  end
-end
-
-class RockWall < Chingu::GameObject
-  traits :bounding_box, :collision_detection
-
-  def setup
-    @image = Image["wall/rock_wall.png"]
-  end
-end
-
-class CaveWall < Chingu::GameObject
-  traits :bounding_box, :collision_detection
-
-  def setup
-    @image = Image["wall/cave_wall.png"]
-  end
-end
-
+## PLAYER
 
 class Player < Chingu::GameObject
   traits :bounding_box, :collision_detection
@@ -187,6 +145,66 @@ class Player < Chingu::GameObject
 
   def halt_down
     @image = @animations[:down].first
+  end
+end
+
+## TILES
+
+class Grass < Chingu::GameObject
+  def setup
+    @image = Image["floor/grass.png"]
+  end
+end
+
+class Wall < Chingu::GameObject
+  traits :bounding_box, :collision_detection
+
+  def setup
+    @image = Image["wall/dark_brick.png"]
+  end
+end
+
+class BushyTree < Chingu::GameObject
+  traits :bounding_box, :collision_detection
+
+  def setup
+    @image = Image["terrain/bushy_tree.png"]
+  end
+end
+
+class WillowTree < Chingu::GameObject
+  traits :bounding_box, :collision_detection
+
+  def setup
+    @image = Image["terrain/willow.png"]
+  end
+end
+
+class RockPath < Chingu::GameObject
+  def setup
+    @image = Image["floor/rock_path.png"]
+  end
+end
+
+class MudFloor < Chingu::GameObject
+  def setup
+    @image = Image["floor/mud_floor.png"]
+  end
+end
+
+class RockWall < Chingu::GameObject
+  traits :bounding_box, :collision_detection
+
+  def setup
+    @image = Image["wall/rock_wall.png"]
+  end
+end
+
+class CaveWall < Chingu::GameObject
+  traits :bounding_box, :collision_detection
+
+  def setup
+    @image = Image["wall/cave_wall.png"]
   end
 end
 
