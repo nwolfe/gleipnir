@@ -584,8 +584,8 @@
     :factor_y: 1.0
     :alpha: 255
 - BushyTree:
-    :x: 821.0
-    :y: 199.0
+    :x: 840.0
+    :y: 200.0
     :angle: 0
     :zorder: 100
     :factor_x: 1.0
@@ -936,10 +936,10 @@
     :factor_y: 1.0
     :alpha: 255
 - BushyTree:
-    :x: 437.0
-    :y: -14.0
+    :x: 432.0
+    :y: -16.0
     :angle: 0
-    :zorder: 100
+    :zorder: 101
     :factor_x: 1.0
     :factor_y: 1.0
     :alpha: 255
@@ -1195,7 +1195,7 @@
     :x: 792.0
     :y: 400.0
     :angle: 280
-    :zorder: 101
+    :zorder: 100
     :factor_x: 1.0
     :factor_y: 1.0
     :alpha: 255
@@ -1328,8 +1328,8 @@
     :factor_y: 1.0
     :alpha: 255
 - Dirt:
-    :x: 164.0
-    :y: 315.0
+    :x: 160.0
+    :y: 312.0
     :angle: 0
     :zorder: 100
     :factor_x: 1.0
@@ -1544,8 +1544,8 @@
     :factor_y: 1.0
     :alpha: 255
 - Dirt:
-    :x: 482.0
-    :y: 75.0
+    :x: 480.0
+    :y: 72.0
     :angle: 0
     :zorder: 100
     :factor_x: 1.0
@@ -1578,6 +1578,86 @@
 - GrassRocks:
     :x: 104.0
     :y: 96.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Dirt:
+    :x: 384.0
+    :y: 0.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Dirt:
+    :x: 408.0
+    :y: 0.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Dirt:
+    :x: 384.0
+    :y: 32.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Dirt:
+    :x: 416.0
+    :y: 32.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Dirt:
+    :x: 456.0
+    :y: 88.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Dirt:
+    :x: 432.0
+    :y: 56.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Dirt:
+    :x: 448.0
+    :y: 64.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Dirt:
+    :x: 413.0
+    :y: 61.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Dirt:
+    :x: 432.0
+    :y: 40.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- Dirt:
+    :x: 465.0
+    :y: 64.0
     :angle: 0
     :zorder: 100
     :factor_x: 1.0
