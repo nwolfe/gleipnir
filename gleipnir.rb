@@ -38,7 +38,7 @@ end
 
 class Grass < Chingu::GameObject
   def setup
-    @image = Image["grass.png"]
+    @image = Image["floor/grass.png"]
   end
 end
 
@@ -46,7 +46,7 @@ class Wall < Chingu::GameObject
   traits :bounding_box, :collision_detection
 
   def setup
-    @image = Image["dark_brick.png"]
+    @image = Image["wall/dark_brick.png"]
   end
 end
 
@@ -54,7 +54,7 @@ class BushyTree < Chingu::GameObject
   traits :bounding_box, :collision_detection
 
   def setup
-    @image = Image["bushy_tree.png"]
+    @image = Image["terrain/bushy_tree.png"]
   end
 end
 
@@ -62,19 +62,19 @@ class WillowTree < Chingu::GameObject
   traits :bounding_box, :collision_detection
 
   def setup
-    @image = Image["willow.png"]
+    @image = Image["terrain/willow.png"]
   end
 end
 
 class RockPath < Chingu::GameObject
   def setup
-    @image = Image["rock_path.png"]
+    @image = Image["floor/rock_path.png"]
   end
 end
 
 class MudFloor < Chingu::GameObject
   def setup
-    @image = Image["mud_floor.png"]
+    @image = Image["floor/mud_floor.png"]
   end
 end
 
@@ -82,7 +82,7 @@ class RockWall < Chingu::GameObject
   traits :bounding_box, :collision_detection
 
   def setup
-    @image = Image["rock_wall.png"]
+    @image = Image["wall/rock_wall.png"]
   end
 end
 
@@ -90,7 +90,7 @@ class CaveWall < Chingu::GameObject
   traits :bounding_box, :collision_detection
 
   def setup
-    @image = Image["cave_wall.png"]
+    @image = Image["wall/cave_wall.png"]
   end
 end
 
@@ -113,7 +113,7 @@ class Player < Chingu::GameObject
       [:released_right, :released_l] => :halt_right
     }
 
-    @animations = Chingu::Animation.new(:file => "player_sheet2_32x32.png")
+    @animations = Chingu::Animation.new(:file => "player/player_sheet2_32x32.png")
     @animations.frame_names = {
       :down => 0..2, 
       :up => 3..5, 
