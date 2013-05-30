@@ -1563,7 +1563,7 @@
     :x: 120.0
     :y: 128.0
     :angle: 350
-    :zorder: 101
+    :zorder: 100
     :factor_x: 1.0
     :factor_y: 1.0
     :alpha: 255
