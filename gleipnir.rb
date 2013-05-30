@@ -148,7 +148,13 @@ class Player < Chingu::GameObject
   end
 end
 
-## TILES
+## FLOOR TILES
+
+class Dirt < Chingu::GameObject
+  def setup
+    @image = Image["floor/dirt.png"]
+  end
+end
 
 class Grass < Chingu::GameObject
   def setup
@@ -156,6 +162,68 @@ class Grass < Chingu::GameObject
   end
 end
 
+class GrassRocks < Chingu::GameObject
+  def setup
+    @image = Image["floor/grass_rocks.png"]
+  end
+end
+
+class Gravel < Chingu::GameObject
+  def setup
+    @image = Image["floor/gravel.png"]
+  end
+end
+
+class MossGround < Chingu::GameObject
+  def setup
+    @image = Image["floor/moss_ground.png"]
+  end
+end
+
+class MossStone < Chingu::GameObject
+  def setup
+    @image = Image["floor/moss_stone.png"]
+  end
+end
+
+class Mud < Chingu::GameObject
+  def setup
+    @image = Image["floor/mud.png"]
+  end
+end
+
+class MudFloorGold < Chingu::GameObject
+  def setup
+    @image = Image["floor/mud_floor_gold.png"]
+  end
+end
+
+class RedCobblestone < Chingu::GameObject
+  def setup
+    @image = Image["floor/red_cobblestone.png"]
+  end
+end
+
+class RockTile < Chingu::GameObject
+  def setup
+    @image = Image["floor/rock_tile.png"]
+  end
+end
+
+class Stone < Chingu::GameObject
+  def setup
+    @image = Image["floor/stone.png"]
+  end
+end
+
+class StoneTile < Chingu::GameObject
+  def setup
+    @image = Image["floor/stone_tile.png"]
+  end
+end
+
+## WALL TILES
+  
 class Wall < Chingu::GameObject
   traits :bounding_box, :collision_detection
 
