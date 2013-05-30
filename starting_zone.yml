@@ -1,1 +1,1153 @@
---- []
+---
+- BushyTree:
+    :x: 32.0
+    :y: 96.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.25
+    :factor_y: 1.25
+    :alpha: 255
+- BushyTree:
+    :x: 344.0
+    :y: 8.0
+    :angle: 0
+    :zorder: 101
+    :factor_x: 1.5
+    :factor_y: 1.5
+    :alpha: 255
+- BushyTree:
+    :x: 56.0
+    :y: 64.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 72.0
+    :y: 120.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 48.0
+    :y: 160.0
+    :angle: 0
+    :zorder: 101
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 8.0
+    :y: 8.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.75
+    :factor_y: 1.75
+    :alpha: 255
+- BushyTree:
+    :x: 48.0
+    :y: 216.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.25
+    :factor_y: 1.25
+    :alpha: 255
+- BushyTree:
+    :x: 80.0
+    :y: 16.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 16.0
+    :y: 256.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: -16.0
+    :y: 144.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 80.0
+    :y: 344.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.25
+    :factor_y: 1.25
+    :alpha: 255
+- BushyTree:
+    :x: 120.0
+    :y: 40.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 152.0
+    :y: 32.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 184.0
+    :y: 144.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.25
+    :factor_y: 1.25
+    :alpha: 255
+- BushyTree:
+    :x: 160.0
+    :y: 40.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.25
+    :factor_y: 1.25
+    :alpha: 255
+- BushyTree:
+    :x: 296.0
+    :y: 136.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.25
+    :factor_y: 1.25
+    :alpha: 255
+- BushyTree:
+    :x: 176.0
+    :y: 64.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 136.0
+    :y: 248.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.25
+    :factor_y: 1.25
+    :alpha: 255
+- BushyTree:
+    :x: 64.0
+    :y: 360.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 0.0
+    :y: 656.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 24.0
+    :y: 600.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 8.0
+    :y: 616.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 8.0
+    :y: 352.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.5
+    :factor_y: 1.5
+    :alpha: 255
+- BushyTree:
+    :x: -24.0
+    :y: 264.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: -8.0
+    :y: 432.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: -8.0
+    :y: 384.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 56.0
+    :y: 464.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 64.0
+    :y: 488.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 96.0
+    :y: 368.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.25
+    :factor_y: 1.25
+    :alpha: 255
+- BushyTree:
+    :x: 136.0
+    :y: 464.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 16.0
+    :y: 536.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.5
+    :factor_y: 1.5
+    :alpha: 255
+- BushyTree:
+    :x: 200.0
+    :y: 656.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 288.0
+    :y: 592.0
+    :angle: 0
+    :zorder: 101
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 282.0
+    :y: 414.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 456.0
+    :y: 424.0
+    :angle: 0
+    :zorder: 101
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 520.0
+    :y: 312.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 392.0
+    :y: 240.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 432.0
+    :y: 272.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 504.0
+    :y: 320.0
+    :angle: 0
+    :zorder: 101
+    :factor_x: 1.25
+    :factor_y: 1.25
+    :alpha: 255
+- BushyTree:
+    :x: 512.0
+    :y: 336.0
+    :angle: 0
+    :zorder: 101
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 456.0
+    :y: 408.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 432.0
+    :y: 432.0
+    :angle: 0
+    :zorder: 101
+    :factor_x: 1.5
+    :factor_y: 1.5
+    :alpha: 255
+- BushyTree:
+    :x: 376.0
+    :y: 520.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 240.0
+    :y: 240.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 264.0
+    :y: 256.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.25
+    :factor_y: 1.25
+    :alpha: 255
+- BushyTree:
+    :x: 328.0
+    :y: 328.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 312.0
+    :y: 360.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.5
+    :factor_y: 1.5
+    :alpha: 255
+- BushyTree:
+    :x: 408.0
+    :y: 264.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.75
+    :factor_y: 1.75
+    :alpha: 255
+- BushyTree:
+    :x: 728.0
+    :y: 552.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.25
+    :factor_y: 1.25
+    :alpha: 255
+- BushyTree:
+    :x: 608.0
+    :y: 512.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.5
+    :factor_y: 1.5
+    :alpha: 255
+- BushyTree:
+    :x: 510.0
+    :y: 539.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 520.0
+    :y: 632.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 392.0
+    :y: 648.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 208.0
+    :y: 496.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.5
+    :factor_y: 1.5
+    :alpha: 255
+- BushyTree:
+    :x: 624.0
+    :y: 232.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.25
+    :factor_y: 1.25
+    :alpha: 255
+- BushyTree:
+    :x: 512.0
+    :y: 176.0
+    :angle: 0
+    :zorder: 101
+    :factor_x: 1.5
+    :factor_y: 1.5
+    :alpha: 255
+- BushyTree:
+    :x: 512.0
+    :y: 200.0
+    :angle: 0
+    :zorder: 101
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 464.0
+    :y: 184.0
+    :angle: 0
+    :zorder: 101
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 480.0
+    :y: 200.0
+    :angle: 0
+    :zorder: 101
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 408.0
+    :y: 160.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.5
+    :factor_y: 1.5
+    :alpha: 255
+- BushyTree:
+    :x: 680.0
+    :y: 384.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.75
+    :factor_y: 1.75
+    :alpha: 255
+- BushyTree:
+    :x: 752.0
+    :y: 256.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.75
+    :factor_y: 1.75
+    :alpha: 255
+- BushyTree:
+    :x: 720.0
+    :y: 288.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 696.0
+    :y: 296.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 688.0
+    :y: 313.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 632.0
+    :y: 288.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.5
+    :factor_y: 1.5
+    :alpha: 255
+- BushyTree:
+    :x: 711.0
+    :y: 333.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 760.0
+    :y: 128.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.5
+    :factor_y: 1.5
+    :alpha: 255
+- BushyTree:
+    :x: 721.0
+    :y: 374.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 724.0
+    :y: 396.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 722.0
+    :y: 416.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 744.0
+    :y: 48.0
+    :angle: 0
+    :zorder: 101
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 642.0
+    :y: 45.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 821.0
+    :y: 199.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 404.0
+    :y: 27.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 800.0
+    :y: 664.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.5
+    :factor_y: 1.5
+    :alpha: 255
+- BushyTree:
+    :x: 834.0
+    :y: 665.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 862.0
+    :y: 663.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 856.0
+    :y: 616.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.25
+    :factor_y: 1.25
+    :alpha: 255
+- BushyTree:
+    :x: 861.0
+    :y: 584.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 859.0
+    :y: 549.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 860.0
+    :y: 499.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 848.0
+    :y: 456.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.5
+    :factor_y: 1.5
+    :alpha: 255
+- BushyTree:
+    :x: 864.0
+    :y: 328.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.25
+    :factor_y: 1.25
+    :alpha: 255
+- BushyTree:
+    :x: 832.0
+    :y: 382.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 832.0
+    :y: 246.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 520.0
+    :y: -16.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 744.0
+    :y: 664.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.25
+    :factor_y: 1.25
+    :alpha: 255
+- BushyTree:
+    :x: 680.0
+    :y: 666.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 638.0
+    :y: 674.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 595.0
+    :y: 674.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 545.0
+    :y: 673.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 486.0
+    :y: 678.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 445.0
+    :y: 664.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 366.0
+    :y: 669.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 303.0
+    :y: 676.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 254.0
+    :y: 659.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 233.0
+    :y: 680.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 173.0
+    :y: 668.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 159.0
+    :y: 661.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 141.0
+    :y: 657.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 111.0
+    :y: 671.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 77.0
+    :y: 660.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 34.0
+    :y: 666.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: -12.0
+    :y: 595.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: -12.0
+    :y: 555.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: -18.0
+    :y: 508.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 8.0
+    :y: 473.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: -7.0
+    :y: 305.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: -13.0
+    :y: 220.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: -15.0
+    :y: 179.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: -9.0
+    :y: 92.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 15.0
+    :y: 58.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 128.0
+    :y: -16.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.5
+    :factor_y: 1.5
+    :alpha: 255
+- BushyTree:
+    :x: 216.0
+    :y: -24.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.25
+    :factor_y: 1.25
+    :alpha: 255
+- BushyTree:
+    :x: 248.0
+    :y: 8.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 312.0
+    :y: 24.0
+    :angle: 0
+    :zorder: 101
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 437.0
+    :y: -14.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 576.0
+    :y: -16.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.25
+    :factor_y: 1.25
+    :alpha: 255
+- BushyTree:
+    :x: 491.0
+    :y: 3.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 648.0
+    :y: 0.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.5
+    :factor_y: 1.5
+    :alpha: 255
+- BushyTree:
+    :x: 736.0
+    :y: -16.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.25
+    :factor_y: 1.25
+    :alpha: 255
+- BushyTree:
+    :x: 762.0
+    :y: -20.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 824.0
+    :y: 8.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.25
+    :factor_y: 1.25
+    :alpha: 255
+- BushyTree:
+    :x: 859.0
+    :y: 39.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 832.0
+    :y: 64.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 840.0
+    :y: 128.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.5
+    :factor_y: 1.5
+    :alpha: 255
+- BushyTree:
+    :x: 857.0
+    :y: 169.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 863.0
+    :y: 243.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 272.0
+    :y: 32.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.25
+    :factor_y: 1.25
+    :alpha: 255
+- BushyTree:
+    :x: 544.0
+    :y: 32.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 2.0
+    :factor_y: 2.0
+    :alpha: 255
+- BushyTree:
+    :x: 696.0
+    :y: 28.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.0
+    :factor_y: 1.0
+    :alpha: 255
+- BushyTree:
+    :x: 712.0
+    :y: 0.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.25
+    :factor_y: 1.25
+    :alpha: 255
+- WillowTree:
+    :x: 496.0
+    :y: 160.0
+    :angle: 360
+    :zorder: 100
+    :factor_x: 1.75
+    :factor_y: 1.75
+    :alpha: 255
+- WillowTree:
+    :x: 336.0
+    :y: 368.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.5
+    :factor_y: 1.5
+    :alpha: 255
+- WillowTree:
+    :x: 240.0
+    :y: 264.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.5
+    :factor_y: 1.5
+    :alpha: 255
+- WillowTree:
+    :x: 64.0
+    :y: 136.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.25
+    :factor_y: 1.25
+    :alpha: 255
+- WillowTree:
+    :x: 432.0
+    :y: 408.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.5
+    :factor_y: 1.5
+    :alpha: 255
+- WillowTree:
+    :x: 680.0
+    :y: 336.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.5
+    :factor_y: 1.5
+    :alpha: 255
+- WillowTree:
+    :x: 496.0
+    :y: 296.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.5
+    :factor_y: 1.5
+    :alpha: 255
+- WillowTree:
+    :x: 752.0
+    :y: 24.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.75
+    :factor_y: 1.75
+    :alpha: 255
+- WillowTree:
+    :x: 48.0
+    :y: 544.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 2.25
+    :factor_y: 2.25
+    :alpha: 255
+- WillowTree:
+    :x: 304.0
+    :y: -8.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 1.5
+    :factor_y: 1.5
+    :alpha: 255
+- WillowTree:
+    :x: 312.0
+    :y: 568.0
+    :angle: 0
+    :zorder: 100
+    :factor_x: 2.0
+    :factor_y: 2.0
+    :alpha: 255
