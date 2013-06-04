@@ -16,7 +16,7 @@ class Player < Chingu::GameObject
       [:released_right, :released_l] => :halt_right
     }
 
-    @animations = Chingu::Animation.new(:file => "player/player_sheet2_32x32.png")
+    @animations = Chingu::Animation.new(:file => "player/player_sheet2_32x32.png", :delay => 200)
     @animations.frame_names = {
       :down => 0..2, 
       :up => 3..5, 
