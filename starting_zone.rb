@@ -48,7 +48,12 @@ class StartingZone < Chingu::GameState
 
   def fight_enemies
     @player.each_collision(Enemy) do |player, enemy|
-      enemy.destroy
+      player.attack(enemy)
+      if enemy.dead?
+        enemy.destroy
+      else
+        enemy.attack(player)
+      end
     end
   end
   
