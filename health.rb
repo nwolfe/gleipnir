@@ -1,5 +1,6 @@
 class Health < Chingu::GameObject
-  traits :bounding_box, :collision_detection
+  trait :collision_detection
+  trait :bounding_box, :scale => 0.80
 
   def initialize(options = {})
     @amount = options[:amount]

@@ -69,15 +69,18 @@ class DarkBrick < Chingu::GameObject
 end
 
 class BushyTree < Chingu::GameObject
-  traits :bounding_box, :collision_detection
+  trait :collision_detection
+  trait :bounding_box, :scale => 0.80
 
   def setup
     @image = Image["terrain/bushy_tree.png"]
+    cache_bounding_box
   end
 end
 
 class BushyTreeApples < Chingu::GameObject
-  traits :bounding_box, :collision_detection
+  trait :collision_detection
+  trait :bounding_box, :scale => 0.80
 
   def setup
     @image = Image["terrain/bushy_tree_apples.png"]
@@ -85,10 +88,12 @@ class BushyTreeApples < Chingu::GameObject
 end
 
 class WillowTree < Chingu::GameObject
-  traits :bounding_box, :collision_detection
+  trait :collision_detection
+  trait :bounding_box, :scale => 0.80
 
   def setup
     @image = Image["terrain/willow.png"]
+    cache_bounding_box
   end
 end
 
