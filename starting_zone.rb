@@ -2,6 +2,7 @@ require './tiles.rb'
 require './trees.rb'
 require './player.rb'
 require './health.rb'
+require './enemy.rb'
 
 class StartingZone < Chingu::GameState
   trait :viewport
@@ -14,6 +15,10 @@ class StartingZone < Chingu::GameState
     load_game_objects
     place_health
     @player = Player.create(:x => 200, :y => 200)
+  end
+
+  def edit
+    push_game_state(Chingu::GameStates::Edit.new(:classes => [Enemy, FullHealth, HalfHealth]))
   end
 
   def fill_with_grass
@@ -29,12 +34,6 @@ class StartingZone < Chingu::GameState
     end
   end
 
-  def update
-    super
-    pickup_health
-    self.viewport.center_around(@player)
-  end
-
   def place_health
     FullHealth.create(:x => 750, :y => 300)
     HalfHealth.create(:x => 97, :y => 70)
@@ -45,5 +44,18 @@ class StartingZone < Chingu::GameState
       health.apply_to(@player)
       health.destroy
     end
+  end
+
+  def fight_enemies
+    @player.each_collision(Enemy) do |player, enemy|
+      enemy.destroy
+    end
+  end
+  
+  def update
+    super
+    self.viewport.center_around(@player)
+    pickup_health
+    fight_enemies
   end
 end
