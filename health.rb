@@ -8,18 +8,24 @@ class Health < Chingu::GameObject
   end
 
   def apply_to(player)
-    player.increase_health @amount
+    player.increase_health(@amount)
   end
 end
 
 class FullHealth < Health
   def initialize(options = {})
-    super(options.merge(:image => "item/health_full.png", :amount => 10))
+    super(options.merge(
+      :image  => "item/health_full.png",
+      :amount => 10
+    ))
   end
 end
 
 class HalfHealth < Health
   def initialize(options = {})
-    super(options.merge(:image => "item/health_half.png", :amount => 5))
+    super(options.merge(
+      :image  => "item/health_half.png",
+      :amount => 5
+    ))
   end
 end

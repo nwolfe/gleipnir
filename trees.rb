@@ -1,6 +1,6 @@
 class BushyTree < Chingu::GameObject
   trait :collision_detection
-  trait :bounding_box, :scale => 0.80, :debug => true
+  trait :bounding_box, :scale => 0.80
 
   def setup
     @image = Image["terrain/bushy_tree.png"]
@@ -19,7 +19,7 @@ end
 
 class WillowTree < Chingu::GameObject
   trait :collision_detection
-  trait :bounding_box, :scale => 0.80, :debug => true
+  trait :bounding_box, :scale => 0.80
 
   def setup
     @image = Image["terrain/willow.png"]

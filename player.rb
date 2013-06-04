@@ -1,6 +1,6 @@
 class Player < Chingu::GameObject
   trait :collision_detection
-  trait :bounding_box, :scale => [0.60, 0.80], :debug => true
+  trait :bounding_box, :scale => [0.60, 0.80]
 
   def setup
     self.input = {
