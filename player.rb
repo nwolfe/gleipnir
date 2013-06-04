@@ -27,6 +27,10 @@ class Player < Chingu::GameObject
     update
   end
 
+  def increase_health(amount)
+    puts "+#{amount} health!"
+  end
+
   def update
     @last_x = @x
     @last_y = @y

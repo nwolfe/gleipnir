@@ -3,6 +3,7 @@ include Gosu
 
 require './player.rb'
 require './tiles.rb'
+require './health.rb'
 
 class Gleipnir < Chingu::Window
   def setup
@@ -35,6 +36,9 @@ class StartingZone < Chingu::GameState
     fill_with_grass
     load_game_objects
     @player = Player.create(:x => 200, :y => 200)
+
+    FullHealth.create(:x => 700, :y => 500)
+    HalfHealth.create(:x => 300, :y => 300)
   end
 
   def fill_with_grass
@@ -52,7 +56,15 @@ class StartingZone < Chingu::GameState
 
   def update
     super
+    pickup_health
     self.viewport.center_around(@player)
+  end
+
+  def pickup_health
+    @player.each_collision(FullHealth, HalfHealth) do |player, health|
+      health.apply_to(@player)
+      health.destroy
+    end
   end
 end
 
