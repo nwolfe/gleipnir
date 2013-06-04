@@ -1,3 +1,5 @@
+require './enemy.rb'
+
 class Player < Chingu::GameObject
   trait :collision_detection
   trait :bounding_box, :scale => [0.60, 0.80]
@@ -30,6 +32,14 @@ class Player < Chingu::GameObject
 
   def increase_health(amount)
     puts "+#{amount} health!"
+  end
+
+  def take_damage(amount)
+    puts "You take #{amount} damage"
+  end
+
+  def attack(enemy)
+    enemy.take_damage(1)
   end
 
   def update
