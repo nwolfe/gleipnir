@@ -1,7 +1,7 @@
 require './enemy.rb'
 
 class Player < Chingu::GameObject
-  trait :collision_detection
+  traits :collision_detection, :timer
   trait :bounding_box, :scale => [0.60, 0.80]
 
   def setup
@@ -16,7 +16,9 @@ class Player < Chingu::GameObject
       [:released_left, :released_h] => :halt_left,
         
       [:holding_right, :holding_l] => :move_right,
-      [:released_right, :released_l] => :halt_right
+      [:released_right, :released_l] => :halt_right,
+
+      :space => :attack
     }
 
     @animations = Chingu::Animation.new(:file => "player/player_sheet2_32x32.png", :delay => 200)
@@ -26,20 +28,56 @@ class Player < Chingu::GameObject
       :right => 6..8, 
       :left => 9..11
     }
+
     @image = @animations[:down].next
     update
+
+    @direction = :down
+    @health = 16
   end
 
   def increase_health(amount)
-    puts "+#{amount} health!"
+    @health += amount
+    puts "+#{amount} health! (#{@health})"
   end
 
   def take_damage(amount)
-    puts "You take #{amount} damage"
+    @health -= amount
+    flash_white
+    puts "You take #{amount} damage! (#{@health})"
   end
 
-  def attack(enemy)
-    enemy.take_damage(1)
+  def flash_white
+    self.mode = :additive
+    after(50) { self.mode = :default }
+  end
+
+  def dead?
+    @health <= 0
+  end
+
+  def attack
+    range = 15
+    if :left == @direction
+      x = self.bb.left - range
+      y = self.bb.center_y
+    elsif :right == @direction
+      x = self.bb.right + range
+      y = self.bb.center_y
+    elsif :up == @direction
+      x = self.bb.center_x
+      y = self.bb.top - range
+    elsif :down == @direction
+      x = self.bb.center_x
+      y = self.bb.bottom + range
+    else
+      return
+    end
+
+    Enemy.each_at(x, y) do |enemy|
+      enemy.take_damage(1)
+      enemy.attack(self)
+    end
   end
 
   def update
@@ -48,7 +86,8 @@ class Player < Chingu::GameObject
   end
 
   def kollides?
-    return self.first_collision(DarkBrick) || 
+    return self.first_collision(Enemy) ||
+    self.first_collision(DarkBrick) || 
     self.first_collision(BushyTree) || 
     self.first_collision(BushyTreeApples) || 
     self.first_collision(WillowTree)
@@ -73,6 +112,7 @@ class Player < Chingu::GameObject
 
   def move_left
     @image = @animations[:left].next
+    @direction = :left
     move(-2, 0)
   end
 
@@ -82,6 +122,7 @@ class Player < Chingu::GameObject
 
   def move_right
     @image = @animations[:right].next
+    @direction = :right
     move(2, 0)
   end
 
@@ -91,6 +132,7 @@ class Player < Chingu::GameObject
 
   def move_up
     @image = @animations[:up].next
+    @direction = :up
     move(0, -2)
   end
 
@@ -100,6 +142,7 @@ class Player < Chingu::GameObject
 
   def move_down
     @image = @animations[:down].next
+    @direction = :down
     move(0, 2)
   end
 

@@ -45,22 +45,20 @@ class StartingZone < Chingu::GameState
       health.destroy
     end
   end
-
-  def fight_enemies
-    @player.each_collision(Enemy) do |player, enemy|
-      player.attack(enemy)
-      if enemy.dead?
-        enemy.destroy
-      else
-        enemy.attack(player)
-      end
-    end
-  end
   
   def update
     super
     self.viewport.center_around(@player)
     pickup_health
-    fight_enemies
+    restart if @player.dead?
+  end
+
+  def restart
+    pop_game_state
+    FullHealth.destroy_all
+    HalfHealth.destroy_all
+    Enemy.destroy_all
+    Player.destroy_all
+    push_game_state StartingZone
   end
 end
