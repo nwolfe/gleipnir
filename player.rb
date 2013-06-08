@@ -28,6 +28,7 @@ class Player < Chingu::GameObject
       :right => 6..8, 
       :left => 9..11
     }
+
     @image = @animations[:down].next
     update
 
@@ -42,9 +43,13 @@ class Player < Chingu::GameObject
 
   def take_damage(amount)
     @health -= amount
+    flash_white
+    puts "You take #{amount} damage! (#{@health})"
+  end
+
+  def flash_white
     self.mode = :additive
     after(50) { self.mode = :default }
-    puts "You take #{amount} damage! (#{@health})"
   end
 
   def dead?
