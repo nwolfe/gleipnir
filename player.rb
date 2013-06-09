@@ -21,7 +21,7 @@ class Player < Chingu::GameObject
       :space => :attack
     }
 
-    @animations = Chingu::Animation.new(:file => "player/player_sheet2_32x32.png", :delay => 200)
+    @animations = Chingu::Animation.new(:file => "player_sheet2_32x32.png", :delay => 200)
     @animations.frame_names = {
       :down => 0..2, 
       :up => 3..5, 
@@ -85,28 +85,21 @@ class Player < Chingu::GameObject
     @last_y = @y
   end
 
-  def kollides?
-    return self.first_collision(Enemy) ||
-    self.first_collision(DarkBrick) || 
-    self.first_collision(BushyTree) || 
-    self.first_collision(BushyTreeApples) || 
-    self.first_collision(WillowTree)
-    self.first_collision(RockWall) || 
-    self.first_collision(CaveWall) || 
-    self.first_collision(CaveWall2) || 
-    self.first_collision(CaveWallGold) || 
-    self.first_collision(CaveWallShade)
+  def collision_detected?
+    impassables = [Enemy, BushyTree, WillowTree]
+    impassables.each { |i| return true if self.first_collision(i) }
+    return false
   end
 
   def move(x, y)
     if x > 0 || x < 0
       @x += x
-      @x = @last_x if kollides?
+      @x = @last_x if collision_detected?
     end
 
     if y > 0 || y < 0
       @y += y
-      @y = @last_y if kollides?
+      @y = @last_y if collision_detected?
     end
   end
 

@@ -1,5 +1,4 @@
 require './tiles.rb'
-require './trees.rb'
 require './player.rb'
 require './health.rb'
 require './enemy.rb'
