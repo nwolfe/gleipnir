@@ -15,7 +15,7 @@ end
 class FullHealth < Health
   def initialize(options = {})
     super(options.merge(
-      :image  => "item/health_full.png",
+      :image  => "health_full.png",
       :amount => 10
     ))
   end
@@ -24,7 +24,7 @@ end
 class HalfHealth < Health
   def initialize(options = {})
     super(options.merge(
-      :image  => "item/health_half.png",
+      :image  => "health_half.png",
       :amount => 5
     ))
   end
