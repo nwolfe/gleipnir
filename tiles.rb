@@ -1,109 +1,39 @@
-class Dirt < Chingu::GameObject
+# TILES
+class Tile < Chingu::GameObject
   def setup
-    @image = Image["floor/dirt.png"]
+    @image = Image["#{self.filename}.png"]
   end
 end
 
-class Grass < Chingu::GameObject
-  def setup
-    @image = Image["floor/grass.png"]
-  end
+class Dirt < Tile; end
+class Grass < Tile; end
+class GrassRocks < Tile; end
+#class Gravel < Tile; end
+#class MossGround < Tile; end
+#class MossStone < Tile; end
+#class Mud < Tile; end
+#class MudFloor < Tile; end
+#class MudFloorGold < Tile; end
+#class RockPath < Tile; end
+
+# TREES
+class Tree < Tile
+  trait :collision_detection
+  trait :bounding_box, :scale => 0.80
 end
 
-class GrassRocks < Chingu::GameObject
-  def setup
-    @image = Image["floor/grass_rocks.png"]
-  end
-end
+class BushyTree < Tree; end
+class WillowTree < Tree; end
+#class BushyTreeApples < Tree; end
 
-class Gravel < Chingu::GameObject
-  def setup
-    @image = Image["floor/gravel.png"]
-  end
-end
+# WALLS
+#class Wall < Tile
+#  traits :bounding_box, :collision_detection
+#end
 
-class MossGround < Chingu::GameObject
-  def setup
-    @image = Image["floor/moss_ground.png"]
-  end
-end
-
-class MossStone < Chingu::GameObject
-  def setup
-    @image = Image["floor/moss_stone.png"]
-  end
-end
-
-class Mud < Chingu::GameObject
-  def setup
-    @image = Image["floor/mud.png"]
-  end
-end
-
-class MudFloor < Chingu::GameObject
-  def setup
-    @image = Image["floor/mud_floor.png"]
-  end
-end
-
-class MudFloorGold < Chingu::GameObject
-  def setup
-    @image = Image["floor/mud_floor_gold.png"]
-  end
-end
-
-class RockPath < Chingu::GameObject
-  def setup
-    @image = Image["floor/rock_path.png"]
-  end
-end
-
-## WALL TILES
-  
-class DarkBrick < Chingu::GameObject
-  traits :bounding_box, :collision_detection
-
-  def setup
-    @image = Image["wall/dark_brick.png"]
-  end
-end
-
-class RockWall < Chingu::GameObject
-  traits :bounding_box, :collision_detection
-
-  def setup
-    @image = Image["wall/rock_wall.png"]
-  end
-end
-
-class CaveWall < Chingu::GameObject
-  traits :bounding_box, :collision_detection
-
-  def setup
-    @image = Image["wall/cave_wall.png"]
-  end
-end
-
-class CaveWall2 < Chingu::GameObject
-  traits :bounding_box, :collision_detection
-
-  def setup
-    @image = Image["wall/cave_wall_2.png"]
-  end
-end
-
-class CaveWallGold < Chingu::GameObject
-  traits :bounding_box, :collision_detection
-
-  def setup
-    @image = Image["wall/cave_wall_gold.png"]
-  end
-end
-
-class CaveWallShade < Chingu::GameObject
-  traits :bounding_box, :collision_detection
-
-  def setup
-    @image = Image["wall/cave_wall_shade.png"]
-  end
-end
+#class DarkBrick < Wall; end
+#class RockWall < Wall; end
+#class CaveWall < Wall; end
+#class CaveWall2 < Wall; end
+#class CaveWallGold < Wall; end
+#class CaveWallShade < Wall; end
