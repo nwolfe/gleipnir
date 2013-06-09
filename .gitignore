@@ -22,3 +22,6 @@ doc/
 
 # Mac OS files
 .DS_Store
+
+# ctags
+tags
