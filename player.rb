@@ -48,8 +48,7 @@ class Player < Chingu::GameObject
   end
 
   def flash_white
-    self.mode = :additive
-    after(50) { self.mode = :default }
+    during(20) { self.mode = :additive }.then { self.mode = :default }
   end
 
   def dead?
@@ -92,12 +91,12 @@ class Player < Chingu::GameObject
   end
 
   def move(x, y)
-    if x > 0 || x < 0
+    if x != 0
       @x += x
       @x = @last_x if collision_detected?
     end
 
-    if y > 0 || y < 0
+    if y != 0
       @y += y
       @y = @last_y if collision_detected?
     end
