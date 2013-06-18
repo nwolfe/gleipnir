@@ -1,5 +1,3 @@
-require './player.rb'
-
 class Enemy < Chingu::GameObject
   traits :collision_detection, :timer
   trait :bounding_box, :scale => [0.60, 0.80]

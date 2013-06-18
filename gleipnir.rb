@@ -1,7 +1,7 @@
 require 'chingu'
 include Gosu
 
-require './starting_zone.rb'
+require_all File.join(ROOT, "lib")
 
 class Gleipnir < Chingu::Window
   def setup

@@ -1,5 +1,3 @@
-require './starting_zone.rb'
-
 class Intro < Chingu::GameState
   def setup
     Chingu::Text.create(:text => "G L E I P N I R", :x => 375, :y => 50)

@@ -1,8 +1,3 @@
-require './tiles.rb'
-require './player.rb'
-require './health.rb'
-require './enemy.rb'
-
 class StartingZone < Chingu::GameState
   trait :viewport
 
