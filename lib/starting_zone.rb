@@ -9,6 +9,8 @@ class StartingZone < Chingu::GameState
     load_game_objects
     place_health
     @player = Player.create(:x => 200, :y => 200)
+    @player_health = Chingu::Text.create(:size => 25)
+    update_health_label
   end
 
   def edit
@@ -29,8 +31,15 @@ class StartingZone < Chingu::GameState
   end
 
   def place_health
-    FullHealth.create(:x => 750, :y => 300)
-    HalfHealth.create(:x => 97, :y => 70)
+    4.times {
+      health = HalfHealth.create
+      randomly_position health while health.collides_with_anything?
+    }
+  end
+
+  def randomly_position(health)
+    health.x = rand($window.width)
+    health.y = rand($window.height)
   end
 
   def pickup_health
@@ -45,6 +54,13 @@ class StartingZone < Chingu::GameState
     self.viewport.center_around(@player)
     pickup_health
     restart if @player.dead?
+    update_health_label
+  end
+
+  def update_health_label
+    @player_health.x = viewport.x + 5
+    @player_health.y = viewport.y + 5
+    @player_health.text = @player.health
   end
 
   def restart
@@ -53,6 +69,6 @@ class StartingZone < Chingu::GameState
     HalfHealth.destroy_all
     Enemy.destroy_all
     Player.destroy_all
-    push_game_state StartingZone
+    switch_game_state StartingZone
   end
 end

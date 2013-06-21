@@ -1,6 +1,7 @@
 class Player < Chingu::GameObject
   traits :collision_detection, :timer
   trait :bounding_box, :scale => [0.60, 0.80]
+  attr_reader :health
 
   def setup
     self.input = {
@@ -36,13 +37,11 @@ class Player < Chingu::GameObject
 
   def increase_health(amount)
     @health += amount
-    puts "+#{amount} health! (#{@health})"
   end
 
   def take_damage(amount)
     @health -= amount
     flash_white
-    puts "You take #{amount} damage! (#{@health})"
   end
 
   def flash_white

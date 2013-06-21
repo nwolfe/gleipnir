@@ -10,6 +10,12 @@ class Health < Chingu::GameObject
   def apply_to(player)
     player.increase_health(@amount)
   end
+
+  def collides_with_anything?
+    obstacles = [BushyTree, WillowTree, Enemy, Player]
+    obstacles.each { |obstacle| return true if self.first_collision obstacle }
+    return false
+  end
 end
 
 class FullHealth < Health
