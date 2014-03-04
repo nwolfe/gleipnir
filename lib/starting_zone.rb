@@ -48,7 +48,7 @@ class StartingZone < Chingu::GameState
       health.destroy
     end
   end
-  
+
   def update
     super
     self.viewport.center_around(@player)
