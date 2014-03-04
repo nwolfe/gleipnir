@@ -79,7 +79,7 @@ class Player < Chingu::GameObject
     end
 
     @image = @attack_animations[@direction][1]
-    after(500) { @image = @attack_animations[@direction][0] }
+    after(200) { @image = @attack_animations[@direction][0] }
 
     Enemy.each_at(x, y) do |enemy|
       enemy.take_damage(1)
