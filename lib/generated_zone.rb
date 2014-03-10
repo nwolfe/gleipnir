@@ -9,9 +9,10 @@ class GeneratedZone < Chingu::GameState
     self.input = {:escape => :exit}
 
     builder = TileBuilder.new(@zone_height, @zone_width, tile_size)
-    builder.build_zone
+    builder.build_zone(50, 50)
 
     @player = Player.create(:x => 200, :y => 200)
+    builder.place_player_at_entrace(@player)
     @player_health = Chingu::Text.create(:size => 25)
     update_health_label
   end

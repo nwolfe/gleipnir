@@ -6,7 +6,11 @@ class Tile < Chingu::GameObject
 end
 
 class Dirt < Tile; end
-class Grass < Tile; end
+
+class Grass < Tile
+  traits :collision_detection, :bounding_box
+end
+
 class GrassRocks < Tile; end
 #class Gravel < Tile; end
 #class MossGround < Tile; end
