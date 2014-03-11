@@ -104,4 +104,16 @@ class ZoneBuilder
       fill(x, y, width, @tile_size, Grass)
     end
   end
+
+  def place_enemies
+    8.times {
+      enemy = Enemy.create
+      randomly_position(enemy) while enemy.collision_detected?
+    }
+  end
+
+  def randomly_position(enemy)
+    enemy.x = rand($window.width)
+    enemy.y = rand($window.height)
+  end
 end

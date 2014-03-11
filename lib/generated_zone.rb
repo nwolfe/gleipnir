@@ -8,6 +8,8 @@ class GeneratedZone < Chingu::GameState
     # Remove lingering objects
     Grass.destroy_all
     BushyTree.destroy_all
+    Enemy.destroy_all
+    Player.destroy_all
 
     tile_size = 32
     @zone_height = 1200
@@ -19,6 +21,7 @@ class GeneratedZone < Chingu::GameState
     builder.build_zone(25, 30)
     @player = Player.create(:x => 100, :y => 10)
     builder.place_player_at_entrance(@player)
+    builder.place_enemies
 
     @player_health = Chingu::Text.create(:size => 25)
     @player_health.x = 5
