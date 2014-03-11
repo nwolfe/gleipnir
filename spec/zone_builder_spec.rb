@@ -1,6 +1,6 @@
 require 'tile_builder'
 
-class TestBuilder < TileBuilder
+class TestBuilder < ZoneBuilder
 
   def initialize(zone_height, zone_width, tile_size)
     @zone_height = zone_height
@@ -13,7 +13,7 @@ class TestBuilder < TileBuilder
   end
 end
 
-describe TileBuilder do
+describe ZoneBuilder do
   describe "snap_to_size" do
     it "works" do
       b = TestBuilder.new(32, 96, 32)

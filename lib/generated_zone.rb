@@ -8,8 +8,8 @@ class GeneratedZone < Chingu::GameState
     self.viewport.game_area = [0, 0, @zone_width, @zone_height]
     self.input = {:escape => :exit}
 
-    builder = TileBuilder.new(@zone_height, @zone_width, tile_size)
-    builder.build_zone(50, 50)
+    builder = ZoneBuilder.new(@zone_height, @zone_width, tile_size)
+    builder.build_zone(30, 50)
 
     @player = Player.create(:x => 200, :y => 200)
     builder.place_player_at_entrace(@player)

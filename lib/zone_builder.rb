@@ -1,4 +1,4 @@
-class TileBuilder
+class ZoneBuilder
 
   def initialize(zone_height, zone_width, tile_size)
     @zone_height = zone_height
@@ -53,9 +53,17 @@ class TileBuilder
     ((length.to_f / size).ceil) * size
   end
 
+  def entrance_coordinates
+    {
+      :x => @zone_width / 4,
+      :y => 0,
+      :width => @zone_width / 5
+    }
+  end
+
   def place_player_at_entrace(player)
-    player.x = @zone_width / 2
-    player.y = @tile_size
+    player.x = entrance_coordinates[:x] + (entrance_coordinates[:width] / 2)
+    player.y = entrance_coordinates[:y] + @tile_size
   end
 
   # roughness = how much the cave varies in width, 1 to 100
@@ -68,9 +76,9 @@ class TileBuilder
     fill_with_trees
 
     # entrance / init
-    starting_x = snap_to_tile(@zone_width / 3)
-    starting_y = 0
-    starting_width = @zone_width / 5
+    starting_x = snap_to_tile entrance_coordinates[:x]
+    starting_y = entrance_coordinates[:y]
+    starting_width = entrance_coordinates[:width]
     fill(starting_x, starting_y, starting_width, @tile_size, Grass)
     fill(starting_x, @tile_size, starting_width, @tile_size, Grass)
 
