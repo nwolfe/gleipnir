@@ -61,7 +61,7 @@ class ZoneBuilder
     }
   end
 
-  def place_player_at_entrace(player)
+  def place_player_at_entrance(player)
     player.x = entrance_coordinates[:x] + (entrance_coordinates[:width] / 2)
     player.y = entrance_coordinates[:y] + @tile_size
   end
@@ -82,7 +82,6 @@ class ZoneBuilder
     fill(starting_x, starting_y, starting_width, @tile_size, Grass)
     fill(starting_x, @tile_size, starting_width, @tile_size, Grass)
 
-    # loop
     x = starting_x
     y = starting_y
     width = starting_width
@@ -92,22 +91,14 @@ class ZoneBuilder
 
       if rand(1..100) <= roughness
         width += @tile_size * [-2, -1, 1, 2].sample
-        if width < (3 * @tile_size)
-          width = 3 * @tile_size
-        end
-        if width > @zone_width
-          width = @zone_width
-        end
+        width = 3 * @tile_size if width < (3 * @tile_size)
+        width = @zone_width if width > @zone_width
       end
 
       if rand(1..100) <= windyness
         x += @tile_size * [-2, -1, 1, 2].sample
-        if x < 0
-          x = 0
-        end
-        if x > (@zone_width - (3 * @tile_size))
-          x = @zone_width - (3 * @tile_size)
-        end
+        x = 0 if x < 0
+        x = @zone_width - (3 * @tile_size) if x > (@zone_width - (3 * @tile_size))
       end
 
       fill(x, y, width, @tile_size, Grass)

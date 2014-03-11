@@ -10,7 +10,7 @@ class Gleipnir < Chingu::Window
 
   def setup
     self.caption = "Gleipnir!"
-    switch_game_state GeneratedZone
+    switch_game_state GeneratedZone.new
   end
 end
 
