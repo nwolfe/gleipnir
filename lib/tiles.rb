@@ -9,6 +9,11 @@ class Dirt < Tile; end
 
 class Grass < Tile
   traits :collision_detection, :bounding_box
+
+  def setup
+    super
+    cache_bounding_box
+  end
 end
 
 class GrassRocks < Tile; end
@@ -24,6 +29,11 @@ class GrassRocks < Tile; end
 class Tree < Tile
   trait :collision_detection
   trait :bounding_box, :scale => 0.80
+
+  def setup
+    super
+    cache_bounding_box
+  end
 end
 
 class BushyTree < Tree; end

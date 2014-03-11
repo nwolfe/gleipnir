@@ -7,6 +7,7 @@ class Enemy < Chingu::GameObject
   def setup
     @image = Chingu::Animation.new(:file => "enemy_sheet_32x32.png")[rand(6)]
     @life = 10
+    cache_bounding_box
     install_ai
   end
 
