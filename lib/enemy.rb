@@ -1,9 +1,14 @@
 class Enemy < Unit
 
-  SPEED = 2
-
   def setup
-    @image = Chingu::Animation.new(:file => "skeleton_sheet_32x32.png")[rand(6)]
+    @animations = Chingu::Animation.new(:file => "skeleton_sheet_32x32.png")
+    @animations.frame_names = {
+      :down => 0..2,
+      :up => 3..5,
+      :right => 6..8,
+      :left => 9..11
+    }
+    @image = @animations[:down].next
     @life = 10
     cache_bounding_box
     install_ai
@@ -18,11 +23,9 @@ class Enemy < Unit
   end
 
   def move_in_random_direction
-    random_direction = [[0, -1], [0, 1], [-1, 0], [1, 0]].sample
+    dir = [:move_left, :move_down, :move_up, :move_right].sample
     during(500) {
-      delta_x = random_direction[0] * SPEED
-      delta_y = random_direction[1] * SPEED
-      move(delta_x, delta_y)
+      self.send(dir)
     }
   end
 
