@@ -9,6 +9,7 @@ class Enemy < Unit
       :left => 9..11
     }
     @image = @animations[:down].next
+    @direction = :down
     @life = 10
     cache_bounding_box
     install_ai
@@ -36,7 +37,14 @@ class Enemy < Unit
     return self.first_collision Player
   end
 
-  def attack(player)
+  def attack(player, direction)
+    opposites = {
+      :left => :right,
+      :right => :left,
+      :up => :down,
+      :down => :up
+    }
+    @image = @animations[opposites[direction]].first
     player.take_damage(1)
   end
 

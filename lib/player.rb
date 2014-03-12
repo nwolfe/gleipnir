@@ -79,7 +79,7 @@ class Player < Unit
 
     Enemy.each_at(x, y) do |enemy|
       enemy.take_damage(1)
-      enemy.attack(self)
+      enemy.attack(self, @direction)
     end
   end
 
