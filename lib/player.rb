@@ -20,7 +20,7 @@ class Player < Chingu::GameObject
       :space => :attack
     }
 
-    @animations = Chingu::Animation.new(:file => "player_sheet2_32x32.png", :delay => 200)
+    @animations = Chingu::Animation.new(:file => "player_sheet2_32x32.png")
     @animations.frame_names = {
       :down => 0..2,
       :up => 3..5,
@@ -28,7 +28,7 @@ class Player < Chingu::GameObject
       :left => 9..11
     }
 
-    @attack_animations = Chingu::Animation.new(:file => "player_attack_32x32.png", :delay => 200)
+    @attack_animations = Chingu::Animation.new(:file => "player_attack_32x32.png")
     @attack_animations.frame_names = {
       :down => 0..1,
       :up => 2..3,

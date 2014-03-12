@@ -5,7 +5,7 @@ class Enemy < Chingu::GameObject
   SPEED = 2
 
   def setup
-    @image = Chingu::Animation.new(:file => "enemy_sheet_32x32.png")[rand(6)]
+    @image = Chingu::Animation.new(:file => "skeleton_sheet_32x32.png")[rand(6)]
     @life = 10
     cache_bounding_box
     install_ai
@@ -59,7 +59,6 @@ class Enemy < Chingu::GameObject
   def take_damage(amount)
     @life -= amount
     flash_white
-    puts "You hit for #{amount}! (#{@life})"
     destroy if @life <= 0
   end
 
