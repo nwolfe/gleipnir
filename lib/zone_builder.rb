@@ -8,21 +8,18 @@ class ZoneBuilder
 
   def place_tile(tile_class, x, y, replace)
     tile = tile_class.create(:x => x, :y => y)
-    if replace
-      BushyTree.all.each do |tree|
-        if tile != tree && tile.x == tree.x && tile.y == tree.y
-          tree.destroy
-        end
-      end
-      Grass.all.each do |grass|
-        if tile != grass && tile.x == grass.x && tile.y == grass.y
-          grass.destroy
-        end
+    destroy_tiles_in_same_location(tile) if replace
+  end
+
+  def destroy_tiles_in_same_location(tile)
+    [BushyTree, WillowTree, Grass].each do |wall_class|
+      wall_class.all.each do |wall|
+        wall.destroy if tile != wall && tile.x == wall.x && tile.y == wall.y
       end
     end
   end
 
-  def fill(starting_x, starting_y, width, height, tile_class, replace = true)
+  def fill_block(starting_x, starting_y, width, height)
     width = snap_to_size(width, @tile_size)
     height = snap_to_size(height, @tile_size)
     tpr = width / @tile_size
@@ -32,8 +29,14 @@ class ZoneBuilder
       x = starting_x + (row * @tile_size)
       tpc.times do |col|
         y = starting_y + (col * @tile_size)
-        place_tile(tile_class, x, y, replace)
+        yield(x, y)
       end
+    end
+  end
+
+  def fill(starting_x, starting_y, width, height, tile_class, replace = true)
+    fill_block(starting_x, starting_y, width, height) do |x, y|
+      place_tile(tile_class, x, y, replace)
     end
   end
 
@@ -42,7 +45,10 @@ class ZoneBuilder
   end
 
   def fill_with_trees
-    fill(0, 0, @zone_width, @zone_height, BushyTree, false)
+    fill_block(0, 0, @zone_width, @zone_height) do |x, y|
+      tree = [BushyTree, WillowTree].sample
+      place_tile(tree, x, y, false)
+    end
   end
 
   def snap_to_tile(length)

@@ -8,6 +8,7 @@ class GeneratedZone < Chingu::GameState
     # Remove lingering objects
     Grass.destroy_all
     BushyTree.destroy_all
+    WillowTree.destroy_all
     Enemy.destroy_all
     Player.destroy_all
 
