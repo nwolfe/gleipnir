@@ -21,7 +21,7 @@ class Enemy < Chingu::GameObject
 
   def move_in_random_direction
     random_direction = [[0, -1], [0, 1], [-1, 0], [1, 0]].sample
-    during(250) {
+    during(500) {
       delta_x = random_direction[0] * SPEED
       delta_y = random_direction[1] * SPEED
       move(delta_x, delta_y)
