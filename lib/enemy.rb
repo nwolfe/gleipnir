@@ -1,6 +1,4 @@
-class Enemy < Chingu::GameObject
-  traits :collision_detection, :timer
-  trait :bounding_box, :scale => [0.60, 0.80]
+class Enemy < Unit
 
   SPEED = 2
 
@@ -28,28 +26,11 @@ class Enemy < Chingu::GameObject
     }
   end
 
-  def move(x, y)
-    if x != 0
-      @x += x
-      @x = @last_x if collision_detected?
-    end
-
-    if y != 0
-      @y += y
-      @y = @last_y if collision_detected?
-    end
-  end
-
   def collision_detected?
     impassables = [BushyTree, WillowTree]
     impassables.each { |imp| return true if self.first_collision(imp) }
     Enemy.each { |enemy| return true if self != enemy && self.collides?(enemy) }
     return self.first_collision Player
-  end
-
-  def update
-    @last_x = @x
-    @last_y = @y
   end
 
   def attack(player)
@@ -60,9 +41,5 @@ class Enemy < Chingu::GameObject
     @life -= amount
     flash_white
     destroy if @life <= 0
-  end
-
-  def flash_white
-    during(20) { self.mode = :additive }.then { self.mode = :default }
   end
 end

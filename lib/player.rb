@@ -1,6 +1,4 @@
-class Player < Chingu::GameObject
-  traits :collision_detection, :timer
-  trait :bounding_box, :scale => [0.60, 0.80]
+class Player < Unit
   attr_reader :health
 
   def setup
@@ -20,7 +18,7 @@ class Player < Chingu::GameObject
       :space => :attack
     }
 
-    @animations = Chingu::Animation.new(:file => "player_sheet2_32x32.png")
+    @animations = Chingu::Animation.new(:file => "player_shadow_32x32.png")
     @animations.frame_names = {
       :down => 0..2,
       :up => 3..5,
@@ -54,10 +52,6 @@ class Player < Chingu::GameObject
     flash_white
   end
 
-  def flash_white
-    during(20) { self.mode = :additive }.then { self.mode = :default }
-  end
-
   def dead?
     @health <= 0
   end
@@ -89,66 +83,9 @@ class Player < Chingu::GameObject
     end
   end
 
-  def update
-    @last_x = @x
-    @last_y = @y
-  end
-
   def collision_detected?
     impassables = [Enemy, BushyTree, WillowTree]
     impassables.each { |i| return true if self.first_collision(i) }
     return false
-  end
-
-  def move(x, y)
-    if x != 0
-      @x += x
-      @x = @last_x if collision_detected?
-    end
-
-    if y != 0
-      @y += y
-      @y = @last_y if collision_detected?
-    end
-  end
-
-  def move_left
-    @image = @animations[:left].next
-    @direction = :left
-    move(-2, 0)
-  end
-
-  def halt_left
-    @image = @animations[:left].first
-  end
-
-  def move_right
-    @image = @animations[:right].next
-    @direction = :right
-    move(2, 0)
-  end
-
-  def halt_right
-    @image = @animations[:right].first
-  end
-
-  def move_up
-    @image = @animations[:up].next
-    @direction = :up
-    move(0, -2)
-  end
-
-  def halt_up
-    @image = @animations[:up].first
-  end
-
-  def move_down
-    @image = @animations[:down].next
-    @direction = :down
-    move(0, 2)
-  end
-
-  def halt_down
-    @image = @animations[:down].first
   end
 end
