@@ -41,6 +41,8 @@ class Player < Chingu::GameObject
 
     @direction = :down
     @health = 16
+
+    cache_bounding_box
   end
 
   def increase_health(amount)
